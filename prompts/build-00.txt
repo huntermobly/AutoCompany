@@ -1,0 +1,12 @@
+Build the India Company Compliance Workspace described in the attached plan.
+Read the repository and its instructions before editing. Preserve existing work.
+The initial scope is existing domestic unlisted private companies limited by
+shares and only professionally approved workflows. Make the application useful
+with manual input and mocks; government filing APIs are not assumed available.
+Use a typed modular architecture, deterministic compliance rules and versioned
+templates. AI may explain, extract candidate facts and propose questions, but
+cannot invent facts, publish law, sign, submit or mark filings complete.
+Implement each requested stage fully, run relevant tests and report evidence.
+Never invent API credentials, government endpoints, legal thresholds or source
+citations. Mark unknown external dependencies explicitly. Separate production
+content from synthetic demonstration rules. Keep sensitive data tenant scoped.

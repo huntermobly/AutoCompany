@@ -1,0 +1,9 @@
+Implement pack review, change requests, approval and signature requirements.
+Freeze approved versions; later edits require a new version and renewed review.
+Build manual MCA handoff with current-form guidance, field worksheet, attachment
+checks and explicit user/professional signing steps. Record FilingAttempt and
+evidence observations separately from application statuses. Submitted, payment
+pending, resubmission, rejected, recorded and approved must not collapse into one
+success state. An SRN or document download alone cannot mark an obligation done.
+Test duplicate receipts, mismatched CIN/form/year, unresolved resubmission and
+replaced documents. Display whether status is manually reported or verified.

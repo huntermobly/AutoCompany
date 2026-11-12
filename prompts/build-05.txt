@@ -1,0 +1,7 @@
+Build schema-driven conditional questions generated from required facts, not
+free-form model guesses. Ask only missing relevant fields; offer unknown and
+explain why a field matters. Support draft saving, returning users, file evidence
+and review of imported values. Show task owner, due date basis, source, missing
+information and coverage. Support needs-information and overdue states without
+claiming all-company compliance. Make the experience accessible on mobile and
+desktop. Test changing an answer that invalidates downstream questions and packs.

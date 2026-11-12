@@ -1,0 +1,255 @@
+[
+  {
+    "id": "S1",
+    "reference": "[Government of India MCA directory](https://igod.gov.in/organization/13)",
+    "urls": [
+      "https://igod.gov.in/organization/13"
+    ],
+    "purpose": "Correct official domain",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S2",
+    "reference": "[mca.org](https://www.mca.org/)",
+    "urls": [
+      "https://www.mca.org/"
+    ],
+    "purpose": "Domain mismatch",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S3",
+    "reference": "[MCA V3 consolidated FAQ](https://www.mca.gov.in/content/dam/mca/pdf/V3_Consolidated_FAQ_Dated_26042022.pdf)",
+    "urls": [
+      "https://www.mca.gov.in/content/dam/mca/pdf/V3_Consolidated_FAQ_Dated_26042022.pdf"
+    ],
+    "purpose": "Historical V3 signing/upload model; revalidate per form",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S4",
+    "reference": "[MCA incorporation and linked-filings FAQ](https://www.mca.gov.in/Ministry/pdf/SPICe%2Band_linked_filings_FAQs_V3_13%20Jan_2022_updated.pdf)",
+    "urls": [
+      "https://www.mca.gov.in/Ministry/pdf/SPICe%2Band_linked_filings_FAQs_V3_13%20Jan_2022_updated.pdf"
+    ],
+    "purpose": "V3 online forms and incorporation family",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S5",
+    "reference": "[API Setu onboarding SOP](https://cdn.apisetu.gov.in/portal/assets/SOP-APISETU.pdf)",
+    "urls": [
+      "https://cdn.apisetu.gov.in/portal/assets/SOP-APISETU.pdf"
+    ],
+    "purpose": "Organization registration and publisher approval",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S6",
+    "reference": "[API Setu MCA verification description](https://blog.apisetu.gov.in/benefits-of-api-setu-over-financial-technology/)",
+    "urls": [
+      "https://blog.apisetu.gov.in/benefits-of-api-setu-over-financial-technology/"
+    ],
+    "purpose": "Potential data route; not current entitlement proof",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S7",
+    "reference": "[API Setu permitted access](https://docs.apisetu.gov.in/document-central/terms-of-use/Permitted%20Access.html)",
+    "urls": [
+      "https://docs.apisetu.gov.in/document-central/terms-of-use/Permitted%20Access.html"
+    ],
+    "purpose": "Contract scope and permitted use",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S8",
+    "reference": "[OGD help](https://data.gov.in/help)",
+    "urls": [
+      "https://data.gov.in/help"
+    ],
+    "purpose": "Registered-user API-key facility",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S9",
+    "reference": "[Company Master Data catalog](https://data.gov.in/catalog/company-master-data)",
+    "urls": [
+      "https://data.gov.in/catalog/company-master-data"
+    ],
+    "purpose": "Open-data discovery; production resource unverified",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S10",
+    "reference": "[Sandbox MCA overview](https://developer.sandbox.co.in/api-reference/kyc/mca/overview)",
+    "urls": [
+      "https://developer.sandbox.co.in/api-reference/kyc/mca/overview"
+    ],
+    "purpose": "Lookup/search and discontinued director endpoint",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S11",
+    "reference": "[Sandbox key creation](https://help.sandbox.co.in/portal/en/kb/articles/generate-your-api-keys)",
+    "urls": [
+      "https://help.sandbox.co.in/portal/en/kb/articles/generate-your-api-keys"
+    ],
+    "purpose": "Console key route",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S12",
+    "reference": "[Sandbox quickstart](https://developer.sandbox.co.in/guides/get-started/quickstart)",
+    "urls": [
+      "https://developer.sandbox.co.in/guides/get-started/quickstart"
+    ],
+    "purpose": "Authentication",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S13",
+    "reference": "[Sandbox Company Master Data](https://developer.sandbox.co.in/api-reference/kyc/mca/company_master_data)",
+    "urls": [
+      "https://developer.sandbox.co.in/api-reference/kyc/mca/company_master_data"
+    ],
+    "purpose": "Lookup endpoint and contract gaps",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S14",
+    "reference": "[Cashfree KYB](https://www.cashfree.com/kyb-solutions)",
+    "urls": [
+      "https://www.cashfree.com/kyb-solutions"
+    ],
+    "purpose": "Alternative vendor capability claim",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S15",
+    "reference": "[OpenRouter authentication](https://openrouter.ai/docs/api_reference/authentication)",
+    "urls": [
+      "https://openrouter.ai/docs/api_reference/authentication"
+    ],
+    "purpose": "Separate AI key and authorization",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S16",
+    "reference": "[OpenRouter provider policies](https://openrouter.ai/docs/guides/privacy/provider-logging)",
+    "urls": [
+      "https://openrouter.ai/docs/guides/privacy/provider-logging"
+    ],
+    "purpose": "Model-provider data handling",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S17",
+    "reference": "[CCA service access](https://www.cca.gov.in/avail_service.html) and [ASP onboarding](https://www.cca.gov.in/sites/files/pdf/esign/CCA-ASP.pdf)",
+    "urls": [
+      "https://www.cca.gov.in/avail_service.html",
+      "https://www.cca.gov.in/sites/files/pdf/esign/CCA-ASP.pdf"
+    ],
+    "purpose": "Electronic-signature provider onboarding",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S18",
+    "reference": "[GSTN FAQs](https://www.gstn.org.in/faqs-category-details)",
+    "urls": [
+      "https://www.gstn.org.in/faqs-category-details"
+    ],
+    "purpose": "Separate ASP/GSP route",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S19",
+    "reference": "[NSWS FAQs](https://www.nsws.gov.in/faqs)",
+    "urls": [
+      "https://www.nsws.gov.in/faqs"
+    ],
+    "purpose": "Approval discovery and limitations",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S20",
+    "reference": "[Companies Act, India Code](https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf)",
+    "urls": [
+      "https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf"
+    ],
+    "purpose": "Sections 92 and 149; check amendments and applicability",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S21",
+    "reference": "[ICSI revised SS-1/SS-2 announcement](https://www.icsi.edu/media/webmodules/Announcement_on_Revised_Secretarial_Standards_13022024.pdf)",
+    "urls": [
+      "https://www.icsi.edu/media/webmodules/Announcement_on_Revised_Secretarial_Standards_13022024.pdf"
+    ],
+    "purpose": "Standards effective April 2024; verify subsequent changes",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S22",
+    "reference": "[Companies Act section 137](https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf?v=20260519200129)",
+    "urls": [
+      "https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf?v=20260519200129"
+    ],
+    "purpose": "General financial-statement filing baseline",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S23",
+    "reference": "[MCA management and administration amendment](https://www.mca.gov.in/Ministry/pdf/CompaniesMgmtAdminAmndtRules_11032021.pdf)",
+    "urls": [
+      "https://www.mca.gov.in/Ministry/pdf/CompaniesMgmtAdminAmndtRules_11032021.pdf"
+    ],
+    "purpose": "Historical MGT-7A basis; not current UI schema",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S24",
+    "reference": "[MCA audit/auditor rules amendment](https://www.mca.gov.in/Ministry/pdf/CompaniesAuditAuditorsAdmendmentRules2018_19022018.pdf)",
+    "urls": [
+      "https://www.mca.gov.in/Ministry/pdf/CompaniesAuditAuditorsAdmendmentRules2018_19022018.pdf"
+    ],
+    "purpose": "ADT-1 workflow family; not current UI schema",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S25",
+    "reference": "[MCA INC-20A kit](https://www.mca.gov.in/content/dam/mca-aem-forms/instructionkits/Instruction%20Kit_INC-20A.pdf)",
+    "urls": [
+      "https://www.mca.gov.in/content/dam/mca-aem-forms/instructionkits/Instruction%20Kit_INC-20A.pdf"
+    ],
+    "purpose": "Commencement workflow; direct fetch blocked",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S26",
+    "reference": "[MCA DIR-12 kit](https://www.mca.gov.in/content/dam/mca/mca-forms-instruction-kit/Instruction%20Kit_Form%20No%20DIR%2012.pdf)",
+    "urls": [
+      "https://www.mca.gov.in/content/dam/mca/mca-forms-instruction-kit/Instruction%20Kit_Form%20No%20DIR%2012.pdf"
+    ],
+    "purpose": "Director-change workflow",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S27",
+    "reference": "[Gazette G.S.R. 880(E), 1 December 2025](https://egazette.gov.in/WriteReadData/2025/268124.pdf)",
+    "urls": [
+      "https://egazette.gov.in/WriteReadData/2025/268124.pdf"
+    ],
+    "purpose": "Amended prescribed small-company thresholds",
+    "legal_approval_status": "not_reviewed"
+  },
+  {
+    "id": "S28",
+    "reference": "[MeitY DPDP Rules and enforcement documents](https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa?pageTitle=Digital-Personal-Data-Protection-Rules-2025%3B)",
+    "urls": [
+      "https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa?pageTitle=Digital-Personal-Data-Protection-Rules-2025%3B"
+    ],
+    "purpose": "Phased commencement and privacy review",
+    "legal_approval_status": "not_reviewed"
+  }
+]

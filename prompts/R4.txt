@@ -1,0 +1,6 @@
+Given the approved template schema and confirmed facts, propose values only for
+the allowed narrative slots. Keep all fixed legal clauses unchanged. Return slot
+values, supporting fact IDs and unresolved placeholders. Do not claim that a
+meeting occurred, a notice was served, consent was obtained or an auditor signed
+unless the supplied evidence confirms it. Do not fill dates or names from memory.
+If the requested wording exceeds the template's approved scope, request review.

@@ -1,0 +1,9 @@
+Add a server-side model adapter with configurable approved provider/model, usage
+limits and structured output validation. Retrieval must filter approved legal
+sources by entity, topic and relevant date. Extract uploaded-document facts as
+unconfirmed candidates with page/field evidence and confidence, not live updates.
+Explain deterministic engine results in plain language with real retrieved IDs.
+Reject invented citations and prompt injections from PDFs or retrieved pages.
+The assistant must return gaps when evidence is missing and never execute legal
+filings or publish rules. Test source conflict, fabricated citations, changed dates,
+malicious document instructions and requests to invent a meeting or signature.

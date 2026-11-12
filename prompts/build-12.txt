@@ -1,0 +1,9 @@
+Prepare a narrow pilot release using the approved scope. Add a coverage page,
+provider-health page, support runbook and measurement for task completion,
+missing-information loops, review corrections and preparation time. Document
+environment variables without secret values, migrations, rollback and restore.
+Separate software fees from estimated statutory/professional charges. Add an
+onboarding checklist for the founder to supply actual account credentials through
+the secret manager. Keep unapproved providers and legal packs disabled. Deliver
+an evidence-based release report; do not claim government approval or live filing
+integration without the corresponding authorization and successful verification.

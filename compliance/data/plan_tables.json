@@ -1,0 +1,510 @@
+[
+  {
+    "id": "table_1",
+    "section": "2. What can actually be automated",
+    "columns": [
+      "Capability",
+      "Practical route",
+      "Product treatment"
+    ],
+    "rows": [
+      [
+        "Explain applicable company law",
+        "Versioned official sources plus reviewed rules",
+        "Explain with source, effective date and facts used"
+      ],
+      [
+        "Prefill company details",
+        "Approved government data access, commercial lookup, or user uploads",
+        "Show provenance, timestamp and confirmation status"
+      ],
+      [
+        "Organize ownership, directors and responsibilities",
+        "Your application database and workflow rules",
+        "Identify gaps; propose changes for review"
+      ],
+      [
+        "Generate resolutions, notices and supporting paperwork",
+        "Professionally reviewed templates populated from confirmed facts",
+        "Editable DOCX and printable PDF, with draft status"
+      ],
+      [
+        "Prepare an MCA filing",
+        "Versioned field worksheet and attachment pack",
+        "Map each field to the current portal form"
+      ],
+      [
+        "Sign supporting documents",
+        "Wet signature or an accepted electronic-signature route, document dependent",
+        "Instructions differ by document and transaction"
+      ],
+      [
+        "Sign an MCA form",
+        "Follow that form's MCA DSC/signatory requirements",
+        "Preserve the actual portal-generated file"
+      ],
+      [
+        "Submit a government filing",
+        "User/professional in MCA V3, unless separately approved integration is obtained",
+        "Evidence-backed handoff; no implied API access"
+      ],
+      [
+        "Update a company's official record",
+        "Complete the applicable legal action and filing",
+        "A local database edit never changes MCA records"
+      ]
+    ],
+    "raw_markdown": "| Capability | Practical route | Product treatment |\n|---|---|---|\n| Explain applicable company law | Versioned official sources plus reviewed rules | Explain with source, effective date and facts used |\n| Prefill company details | Approved government data access, commercial lookup, or user uploads | Show provenance, timestamp and confirmation status |\n| Organize ownership, directors and responsibilities | Your application database and workflow rules | Identify gaps; propose changes for review |\n| Generate resolutions, notices and supporting paperwork | Professionally reviewed templates populated from confirmed facts | Editable DOCX and printable PDF, with draft status |\n| Prepare an MCA filing | Versioned field worksheet and attachment pack | Map each field to the current portal form |\n| Sign supporting documents | Wet signature or an accepted electronic-signature route, document dependent | Instructions differ by document and transaction |\n| Sign an MCA form | Follow that form's MCA DSC/signatory requirements | Preserve the actual portal-generated file |\n| Submit a government filing | User/professional in MCA V3, unless separately approved integration is obtained | Evidence-backed handoff; no implied API access |\n| Update a company's official record | Complete the applicable legal action and filing | A local database edit never changes MCA records |"
+  },
+  {
+    "id": "table_2",
+    "section": "4. Initial customers and scope",
+    "columns": [
+      "Priority",
+      "Deliverable",
+      "Acceptance criterion"
+    ],
+    "rows": [
+      [
+        "P0",
+        "Profile and company structure",
+        "Every fact has provenance; conflicts require confirmation"
+      ],
+      [
+        "P0",
+        "Applicability and calendar",
+        "Every task identifies rule version, trigger, scope and evidence gaps"
+      ],
+      [
+        "P0",
+        "Questionnaire",
+        "Asks only missing relevant questions; supports unknown answers"
+      ],
+      [
+        "P0",
+        "Meeting/document packs",
+        "No final output with unresolved required fields or invented events"
+      ],
+      [
+        "P0",
+        "Annual filing preparation",
+        "Supported AOC-4 and MGT-7/7A route selected from reviewed rules"
+      ],
+      [
+        "P0",
+        "Professional review",
+        "Reviewer can return a pack with field-specific comments"
+      ],
+      [
+        "P0",
+        "Filing handoff and evidence",
+        "Downloading or entering an SRN cannot falsely mark completion"
+      ],
+      [
+        "P0",
+        "Source-change review",
+        "New legal text cannot activate rules without review"
+      ],
+      [
+        "P1",
+        "Routine event workflows",
+        "Add only after form-specific validation and reviewer sign-off"
+      ],
+      [
+        "P1",
+        "Approved data provider",
+        "Manual onboarding still works during outages"
+      ],
+      [
+        "P2",
+        "Incorporation, OPC, LLP",
+        "Independent questionnaires, rules and acceptance fixtures"
+      ],
+      [
+        "P2",
+        "GST, tax, labour and state licences",
+        "Separate authority-specific integrations and rule packs"
+      ]
+    ],
+    "raw_markdown": "| Priority | Deliverable | Acceptance criterion |\n|---|---|---|\n| P0 | Profile and company structure | Every fact has provenance; conflicts require confirmation |\n| P0 | Applicability and calendar | Every task identifies rule version, trigger, scope and evidence gaps |\n| P0 | Questionnaire | Asks only missing relevant questions; supports unknown answers |\n| P0 | Meeting/document packs | No final output with unresolved required fields or invented events |\n| P0 | Annual filing preparation | Supported AOC-4 and MGT-7/7A route selected from reviewed rules |\n| P0 | Professional review | Reviewer can return a pack with field-specific comments |\n| P0 | Filing handoff and evidence | Downloading or entering an SRN cannot falsely mark completion |\n| P0 | Source-change review | New legal text cannot activate rules without review |\n| P1 | Routine event workflows | Add only after form-specific validation and reviewer sign-off |\n| P1 | Approved data provider | Manual onboarding still works during outages |\n| P2 | Incorporation, OPC, LLP | Independent questionnaires, rules and acceptance fixtures |\n| P2 | GST, tax, labour and state licences | Separate authority-specific integrations and rule packs |"
+  },
+  {
+    "id": "table_3",
+    "section": "Information to collect",
+    "columns": [
+      "Group",
+      "Facts and documents",
+      "Collection rule"
+    ],
+    "rows": [
+      [
+        "Company identity",
+        "CIN, name, incorporation date, class, status, registered address, financial year, COI, MOA/AOA",
+        "Confirm lookup values against current evidence"
+      ],
+      [
+        "Ownership",
+        "Members, share classes, holdings, beneficial ownership flags, group relationships, foreign ownership",
+        "Ask about exceptions before showing a standard route"
+      ],
+      [
+        "Governance",
+        "Directors/DINs, appointments/cessations, residency facts, auditor details, signatory role",
+        "Collect only data required for the selected workflow"
+      ],
+      [
+        "Financial context",
+        "Paid-up capital, turnover and relevant period, audited statements, loans/deposits and related-party flags",
+        "Financial amounts require units and source; missing is not zero"
+      ],
+      [
+        "Meeting history",
+        "Board/AGM dates, notice/service facts, attendance, decisions, approvals/extensions",
+        "Never infer that a meeting occurred"
+      ],
+      [
+        "Other obligations",
+        "Business activities, operating states, employees, tax/labour registrations and sector licences",
+        "Identify additional packs or specialist review"
+      ],
+      [
+        "Filing history",
+        "Previous forms, SRNs, receipts, status evidence, outstanding notices",
+        "Preserve evidence date and who supplied it"
+      ]
+    ],
+    "raw_markdown": "| Group | Facts and documents | Collection rule |\n|---|---|---|\n| Company identity | CIN, name, incorporation date, class, status, registered address, financial year, COI, MOA/AOA | Confirm lookup values against current evidence |\n| Ownership | Members, share classes, holdings, beneficial ownership flags, group relationships, foreign ownership | Ask about exceptions before showing a standard route |\n| Governance | Directors/DINs, appointments/cessations, residency facts, auditor details, signatory role | Collect only data required for the selected workflow |\n| Financial context | Paid-up capital, turnover and relevant period, audited statements, loans/deposits and related-party flags | Financial amounts require units and source; missing is not zero |\n| Meeting history | Board/AGM dates, notice/service facts, attendance, decisions, approvals/extensions | Never infer that a meeting occurred |\n| Other obligations | Business activities, operating states, employees, tax/labour registrations and sector licences | Identify additional packs or specialist review |\n| Filing history | Previous forms, SRNs, receipts, status evidence, outstanding notices | Preserve evidence date and who supplied it |"
+  },
+  {
+    "id": "table_4",
+    "section": "6. Workflow packs and document outputs",
+    "columns": [
+      "Workflow",
+      "Inputs",
+      "Preparation output",
+      "Release condition"
+    ],
+    "rows": [
+      [
+        "Board/AGM documentation",
+        "Meeting purpose, actual/planned dates, participants, notice and voting facts",
+        "Notice, agenda, resolution and minutes drafts; evidence checklist",
+        "Current applicable SS-1/SS-2 and statutory requirements reviewed [S21]"
+      ],
+      [
+        "AOC-4 preparation",
+        "Confirmed financial year, audited statements, reports, adoption/AGM facts",
+        "Field worksheet, attachment index and consistency report",
+        "Correct form variant, current kit and signatories verified [S22]"
+      ],
+      [
+        "MGT-7/7A preparation",
+        "Company classification, ownership, directors, meetings and annual data",
+        "Annual-return worksheet and supporting schedules",
+        "Classification, certification and current form version verified [S23]"
+      ],
+      [
+        "Auditor appointment / ADT-1",
+        "Nature of appointment, auditor consent/eligibility and resolution facts",
+        "Appointment pack and filing worksheet",
+        "Current route reviewed; do not assume identical treatment of first and later appointments [S24]"
+      ],
+      [
+        "Commencement / INC-20A",
+        "Applicable incorporation facts and supporting evidence",
+        "Conditional checklist and field worksheet",
+        "Confirm applicability and current instructions [S25]"
+      ],
+      [
+        "Director changes / DIR-12",
+        "Type/date of change, DIN, appointment/resignation evidence",
+        "Resolution/consent or cessation pack and worksheet",
+        "Correct route, declarations and signature requirements reviewed [S26]"
+      ]
+    ],
+    "raw_markdown": "| Workflow | Inputs | Preparation output | Release condition |\n|---|---|---|---|\n| Board/AGM documentation | Meeting purpose, actual/planned dates, participants, notice and voting facts | Notice, agenda, resolution and minutes drafts; evidence checklist | Current applicable SS-1/SS-2 and statutory requirements reviewed [S21] |\n| AOC-4 preparation | Confirmed financial year, audited statements, reports, adoption/AGM facts | Field worksheet, attachment index and consistency report | Correct form variant, current kit and signatories verified [S22] |\n| MGT-7/7A preparation | Company classification, ownership, directors, meetings and annual data | Annual-return worksheet and supporting schedules | Classification, certification and current form version verified [S23] |\n| Auditor appointment / ADT-1 | Nature of appointment, auditor consent/eligibility and resolution facts | Appointment pack and filing worksheet | Current route reviewed; do not assume identical treatment of first and later appointments [S24] |\n| Commencement / INC-20A | Applicable incorporation facts and supporting evidence | Conditional checklist and field worksheet | Confirm applicability and current instructions [S25] |\n| Director changes / DIR-12 | Type/date of change, DIN, appointment/resignation evidence | Resolution/consent or cessation pack and worksheet | Correct route, declarations and signature requirements reviewed [S26] |"
+  },
+  {
+    "id": "table_5",
+    "section": "7. Architecture",
+    "columns": [
+      "Module",
+      "Responsibility",
+      "Boundary"
+    ],
+    "rows": [
+      [
+        "Profile and evidence",
+        "Confirmed facts and source documents",
+        "AI extraction cannot silently overwrite a verified fact"
+      ],
+      [
+        "Rules engine",
+        "Applicability, deadlines, routing, required evidence",
+        "Deterministic; does not delegate arithmetic or law selection to the LLM"
+      ],
+      [
+        "Questionnaire engine",
+        "Conditional schemas, saved progress, field validation",
+        "Supports unknown, disputed and not-applicable separately"
+      ],
+      [
+        "Knowledge retrieval",
+        "Approved legal text filtered by date and topic",
+        "Public laws separated from each tenant's private documents"
+      ],
+      [
+        "AI assistant",
+        "Explain, summarize, extract candidates, propose questions",
+        "Cannot publish rules, sign or submit filings"
+      ],
+      [
+        "Template engine",
+        "Versioned DOCX/PDF and worksheet generation",
+        "Approved fields/clauses only; no guessed signatures"
+      ],
+      [
+        "Integration adapters",
+        "Data lookup and optional authorized services",
+        "Capability flags and provider-specific contracts"
+      ],
+      [
+        "Review and filing ledger",
+        "Approvals, signatory steps, receipts and status",
+        "All transitions audited and evidence-backed"
+      ],
+      [
+        "Source monitor",
+        "Fetch, hash, compare and queue changes",
+        "Publication requires a qualified reviewer"
+      ]
+    ],
+    "raw_markdown": "| Module | Responsibility | Boundary |\n|---|---|---|\n| Profile and evidence | Confirmed facts and source documents | AI extraction cannot silently overwrite a verified fact |\n| Rules engine | Applicability, deadlines, routing, required evidence | Deterministic; does not delegate arithmetic or law selection to the LLM |\n| Questionnaire engine | Conditional schemas, saved progress, field validation | Supports unknown, disputed and not-applicable separately |\n| Knowledge retrieval | Approved legal text filtered by date and topic | Public laws separated from each tenant's private documents |\n| AI assistant | Explain, summarize, extract candidates, propose questions | Cannot publish rules, sign or submit filings |\n| Template engine | Versioned DOCX/PDF and worksheet generation | Approved fields/clauses only; no guessed signatures |\n| Integration adapters | Data lookup and optional authorized services | Capability flags and provider-specific contracts |\n| Review and filing ledger | Approvals, signatory steps, receipts and status | All transitions audited and evidence-backed |\n| Source monitor | Fetch, hash, compare and queue changes | Publication requires a qualified reviewer |"
+  },
+  {
+    "id": "table_6",
+    "section": "10. Delivery plan",
+    "columns": [
+      "Stage",
+      "Work",
+      "Exit gate"
+    ],
+    "rows": [
+      [
+        "Week 1",
+        "Confirm customer segment, source register, professional reviewer, provider applications",
+        "Approved scope and current legal-source checklist"
+      ],
+      [
+        "Weeks 2–3",
+        "Authentication, isolation, profile, evidence, questionnaire, structure view",
+        "Synthetic companies onboard correctly; access tests pass"
+      ],
+      [
+        "Weeks 4–5",
+        "Rules/calendar, meeting templates, annual preparation",
+        "Reviewer-approved fixtures and correctly rendered packs"
+      ],
+      [
+        "Weeks 6–7",
+        "AI explanations/extraction, review workspace, filing evidence",
+        "Complete end-to-end draft-to-evidence workflow"
+      ],
+      [
+        "Weeks 8–10",
+        "Source monitoring, provider integration, pilot and hardening",
+        "Critical tests pass and supported packs approved"
+      ]
+    ],
+    "raw_markdown": "| Stage | Work | Exit gate |\n|---|---|---|\n| Week 1 | Confirm customer segment, source register, professional reviewer, provider applications | Approved scope and current legal-source checklist |\n| Weeks 2–3 | Authentication, isolation, profile, evidence, questionnaire, structure view | Synthetic companies onboard correctly; access tests pass |\n| Weeks 4–5 | Rules/calendar, meeting templates, annual preparation | Reviewer-approved fixtures and correctly rendered packs |\n| Weeks 6–7 | AI explanations/extraction, review workspace, filing evidence | Complete end-to-end draft-to-evidence workflow |\n| Weeks 8–10 | Source monitoring, provider integration, pilot and hardening | Critical tests pass and supported packs approved |"
+  },
+  {
+    "id": "table_7",
+    "section": "13. Pre-launch decisions and tests",
+    "columns": [
+      "Owner",
+      "Decision or verification",
+      "When required"
+    ],
+    "rows": [
+      [
+        "Founder",
+        "Legal business identity, domain email, API applications and commercial contracts",
+        "Before credentials/production data"
+      ],
+      [
+        "CA/CS reviewer",
+        "Supported entity scope, current kits, exclusions, deadlines, signatures/certification",
+        "Before enabling each production pack"
+      ],
+      [
+        "Engineering",
+        "Provider schema inconsistencies, data freshness and manual fallback",
+        "Before provider launch"
+      ],
+      [
+        "Legal/privacy",
+        "Current privacy-law commencement, processor terms and retention",
+        "Before real customer onboarding"
+      ],
+      [
+        "Product",
+        "Pilot users, included services, escalation and pricing",
+        "Before paid pilot"
+      ]
+    ],
+    "raw_markdown": "| Owner | Decision or verification | When required |\n|---|---|---|\n| Founder | Legal business identity, domain email, API applications and commercial contracts | Before credentials/production data |\n| CA/CS reviewer | Supported entity scope, current kits, exclusions, deadlines, signatures/certification | Before enabling each production pack |\n| Engineering | Provider schema inconsistencies, data freshness and manual fallback | Before provider launch |\n| Legal/privacy | Current privacy-law commencement, processor terms and retention | Before real customer onboarding |\n| Product | Pilot users, included services, escalation and pricing | Before paid pilot |"
+  },
+  {
+    "id": "table_8",
+    "section": "14. Source register",
+    "columns": [
+      "ID",
+      "Primary source",
+      "Used for"
+    ],
+    "rows": [
+      [
+        "S1",
+        "[Government of India MCA directory](https://igod.gov.in/organization/13)",
+        "Correct official domain"
+      ],
+      [
+        "S2",
+        "[mca.org](https://www.mca.org/)",
+        "Domain mismatch"
+      ],
+      [
+        "S3",
+        "[MCA V3 consolidated FAQ](https://www.mca.gov.in/content/dam/mca/pdf/V3_Consolidated_FAQ_Dated_26042022.pdf)",
+        "Historical V3 signing/upload model; revalidate per form"
+      ],
+      [
+        "S4",
+        "[MCA incorporation and linked-filings FAQ](https://www.mca.gov.in/Ministry/pdf/SPICe%2Band_linked_filings_FAQs_V3_13%20Jan_2022_updated.pdf)",
+        "V3 online forms and incorporation family"
+      ],
+      [
+        "S5",
+        "[API Setu onboarding SOP](https://cdn.apisetu.gov.in/portal/assets/SOP-APISETU.pdf)",
+        "Organization registration and publisher approval"
+      ],
+      [
+        "S6",
+        "[API Setu MCA verification description](https://blog.apisetu.gov.in/benefits-of-api-setu-over-financial-technology/)",
+        "Potential data route; not current entitlement proof"
+      ],
+      [
+        "S7",
+        "[API Setu permitted access](https://docs.apisetu.gov.in/document-central/terms-of-use/Permitted%20Access.html)",
+        "Contract scope and permitted use"
+      ],
+      [
+        "S8",
+        "[OGD help](https://data.gov.in/help)",
+        "Registered-user API-key facility"
+      ],
+      [
+        "S9",
+        "[Company Master Data catalog](https://data.gov.in/catalog/company-master-data)",
+        "Open-data discovery; production resource unverified"
+      ],
+      [
+        "S10",
+        "[Sandbox MCA overview](https://developer.sandbox.co.in/api-reference/kyc/mca/overview)",
+        "Lookup/search and discontinued director endpoint"
+      ],
+      [
+        "S11",
+        "[Sandbox key creation](https://help.sandbox.co.in/portal/en/kb/articles/generate-your-api-keys)",
+        "Console key route"
+      ],
+      [
+        "S12",
+        "[Sandbox quickstart](https://developer.sandbox.co.in/guides/get-started/quickstart)",
+        "Authentication"
+      ],
+      [
+        "S13",
+        "[Sandbox Company Master Data](https://developer.sandbox.co.in/api-reference/kyc/mca/company_master_data)",
+        "Lookup endpoint and contract gaps"
+      ],
+      [
+        "S14",
+        "[Cashfree KYB](https://www.cashfree.com/kyb-solutions)",
+        "Alternative vendor capability claim"
+      ],
+      [
+        "S15",
+        "[OpenRouter authentication](https://openrouter.ai/docs/api_reference/authentication)",
+        "Separate AI key and authorization"
+      ],
+      [
+        "S16",
+        "[OpenRouter provider policies](https://openrouter.ai/docs/guides/privacy/provider-logging)",
+        "Model-provider data handling"
+      ],
+      [
+        "S17",
+        "[CCA service access](https://www.cca.gov.in/avail_service.html) and [ASP onboarding](https://www.cca.gov.in/sites/files/pdf/esign/CCA-ASP.pdf)",
+        "Electronic-signature provider onboarding"
+      ],
+      [
+        "S18",
+        "[GSTN FAQs](https://www.gstn.org.in/faqs-category-details)",
+        "Separate ASP/GSP route"
+      ],
+      [
+        "S19",
+        "[NSWS FAQs](https://www.nsws.gov.in/faqs)",
+        "Approval discovery and limitations"
+      ],
+      [
+        "S20",
+        "[Companies Act, India Code](https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf)",
+        "Sections 92 and 149; check amendments and applicability"
+      ],
+      [
+        "S21",
+        "[ICSI revised SS-1/SS-2 announcement](https://www.icsi.edu/media/webmodules/Announcement_on_Revised_Secretarial_Standards_13022024.pdf)",
+        "Standards effective April 2024; verify subsequent changes"
+      ],
+      [
+        "S22",
+        "[Companies Act section 137](https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf?v=20260519200129)",
+        "General financial-statement filing baseline"
+      ],
+      [
+        "S23",
+        "[MCA management and administration amendment](https://www.mca.gov.in/Ministry/pdf/CompaniesMgmtAdminAmndtRules_11032021.pdf)",
+        "Historical MGT-7A basis; not current UI schema"
+      ],
+      [
+        "S24",
+        "[MCA audit/auditor rules amendment](https://www.mca.gov.in/Ministry/pdf/CompaniesAuditAuditorsAdmendmentRules2018_19022018.pdf)",
+        "ADT-1 workflow family; not current UI schema"
+      ],
+      [
+        "S25",
+        "[MCA INC-20A kit](https://www.mca.gov.in/content/dam/mca-aem-forms/instructionkits/Instruction%20Kit_INC-20A.pdf)",
+        "Commencement workflow; direct fetch blocked"
+      ],
+      [
+        "S26",
+        "[MCA DIR-12 kit](https://www.mca.gov.in/content/dam/mca/mca-forms-instruction-kit/Instruction%20Kit_Form%20No%20DIR%2012.pdf)",
+        "Director-change workflow"
+      ],
+      [
+        "S27",
+        "[Gazette G.S.R. 880(E), 1 December 2025](https://egazette.gov.in/WriteReadData/2025/268124.pdf)",
+        "Amended prescribed small-company thresholds"
+      ],
+      [
+        "S28",
+        "[MeitY DPDP Rules and enforcement documents](https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa?pageTitle=Digital-Personal-Data-Protection-Rules-2025%3B)",
+        "Phased commencement and privacy review"
+      ]
+    ],
+    "raw_markdown": "| ID | Primary source | Used for |\n|---|---|---|\n| S1 | [Government of India MCA directory](https://igod.gov.in/organization/13) | Correct official domain |\n| S2 | [mca.org](https://www.mca.org/) | Domain mismatch |\n| S3 | [MCA V3 consolidated FAQ](https://www.mca.gov.in/content/dam/mca/pdf/V3_Consolidated_FAQ_Dated_26042022.pdf) | Historical V3 signing/upload model; revalidate per form |\n| S4 | [MCA incorporation and linked-filings FAQ](https://www.mca.gov.in/Ministry/pdf/SPICe%2Band_linked_filings_FAQs_V3_13%20Jan_2022_updated.pdf) | V3 online forms and incorporation family |\n| S5 | [API Setu onboarding SOP](https://cdn.apisetu.gov.in/portal/assets/SOP-APISETU.pdf) | Organization registration and publisher approval |\n| S6 | [API Setu MCA verification description](https://blog.apisetu.gov.in/benefits-of-api-setu-over-financial-technology/) | Potential data route; not current entitlement proof |\n| S7 | [API Setu permitted access](https://docs.apisetu.gov.in/document-central/terms-of-use/Permitted%20Access.html) | Contract scope and permitted use |\n| S8 | [OGD help](https://data.gov.in/help) | Registered-user API-key facility |\n| S9 | [Company Master Data catalog](https://data.gov.in/catalog/company-master-data) | Open-data discovery; production resource unverified |\n| S10 | [Sandbox MCA overview](https://developer.sandbox.co.in/api-reference/kyc/mca/overview) | Lookup/search and discontinued director endpoint |\n| S11 | [Sandbox key creation](https://help.sandbox.co.in/portal/en/kb/articles/generate-your-api-keys) | Console key route |\n| S12 | [Sandbox quickstart](https://developer.sandbox.co.in/guides/get-started/quickstart) | Authentication |\n| S13 | [Sandbox Company Master Data](https://developer.sandbox.co.in/api-reference/kyc/mca/company_master_data) | Lookup endpoint and contract gaps |\n| S14 | [Cashfree KYB](https://www.cashfree.com/kyb-solutions) | Alternative vendor capability claim |\n| S15 | [OpenRouter authentication](https://openrouter.ai/docs/api_reference/authentication) | Separate AI key and authorization |\n| S16 | [OpenRouter provider policies](https://openrouter.ai/docs/guides/privacy/provider-logging) | Model-provider data handling |\n| S17 | [CCA service access](https://www.cca.gov.in/avail_service.html) and [ASP onboarding](https://www.cca.gov.in/sites/files/pdf/esign/CCA-ASP.pdf) | Electronic-signature provider onboarding |\n| S18 | [GSTN FAQs](https://www.gstn.org.in/faqs-category-details) | Separate ASP/GSP route |\n| S19 | [NSWS FAQs](https://www.nsws.gov.in/faqs) | Approval discovery and limitations |\n| S20 | [Companies Act, India Code](https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf) | Sections 92 and 149; check amendments and applicability |\n| S21 | [ICSI revised SS-1/SS-2 announcement](https://www.icsi.edu/media/webmodules/Announcement_on_Revised_Secretarial_Standards_13022024.pdf) | Standards effective April 2024; verify subsequent changes |\n| S22 | [Companies Act section 137](https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf?v=20260519200129) | General financial-statement filing baseline |\n| S23 | [MCA management and administration amendment](https://www.mca.gov.in/Ministry/pdf/CompaniesMgmtAdminAmndtRules_11032021.pdf) | Historical MGT-7A basis; not current UI schema |\n| S24 | [MCA audit/auditor rules amendment](https://www.mca.gov.in/Ministry/pdf/CompaniesAuditAuditorsAdmendmentRules2018_19022018.pdf) | ADT-1 workflow family; not current UI schema |\n| S25 | [MCA INC-20A kit](https://www.mca.gov.in/content/dam/mca-aem-forms/instructionkits/Instruction%20Kit_INC-20A.pdf) | Commencement workflow; direct fetch blocked |\n| S26 | [MCA DIR-12 kit](https://www.mca.gov.in/content/dam/mca/mca-forms-instruction-kit/Instruction%20Kit_Form%20No%20DIR%2012.pdf) | Director-change workflow |\n| S27 | [Gazette G.S.R. 880(E), 1 December 2025](https://egazette.gov.in/WriteReadData/2025/268124.pdf) | Amended prescribed small-company thresholds |\n| S28 | [MeitY DPDP Rules and enforcement documents](https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa?pageTitle=Digital-Personal-Data-Protection-Rules-2025%3B) | Phased commencement and privacy review |"
+  }
+]

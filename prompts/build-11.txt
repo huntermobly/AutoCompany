@@ -1,0 +1,8 @@
+Audit the built application for cross-tenant access, insecure downloads, secret
+leakage, unsafe document parsing, SSRF, prompt injection and unauthorized actions.
+Add purpose/permission records, retention policies with legal-hold support,
+backup/restore procedures and redacted operational logs. Verify each supported
+workflow against a qualified reviewer's expected fixtures and latest kits.
+Generate and inspect representative PDFs/DOCX files. Run an end-to-end synthetic
+case from intake through review, signing handoff and filing evidence. Report
+failed checks honestly and block production release on critical failures.

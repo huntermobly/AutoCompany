@@ -1,0 +1,6 @@
+Compare the supplied old and new official passages and metadata. Return JSON:
+change_summary, publication_date, effective_date, impacted_rule_ids,
+affected_entity_conditions, proposed_tests, uncertainties and source_locators.
+Distinguish obligation changes, filing mechanics, extensions and fee relief.
+Do not infer an effective date from the crawl date. Do not publish rules or modify
+customer records. Mark ambiguous applicability for professional review.

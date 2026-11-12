@@ -1,0 +1,8 @@
+Implement permitted-source monitoring with conditional fetches, hashes, bounded
+retries, host allowlists and manual source import. A blocked fetch creates a
+freshness warning; it must not trigger access-control circumvention. Produce a
+review queue showing proposed changes, effective dates, impacted rules and tasks.
+AI may summarize diffs but cannot approve them. After reviewer publication,
+re-evaluate affected open tasks and preserve prior outputs. Test backdated and
+future-effective notifications, old documents resurfacing, fee-only relief,
+unrelated website changes, inaccessible sources and rollback of a faulty release.

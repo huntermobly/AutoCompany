@@ -1,0 +1,9 @@
+Implement CompanyFact with value, units, valid period, source evidence, extraction
+status and human confirmation. Build profile intake with manual entry and a mock
+lookup adapter. Collect entity scope, ownership/group flags, directors, auditor,
+registered office, financial year and relevant registrations progressively.
+Create a structure view linking members, shares, directors and responsible users.
+Show discrepancies side by side; never overwrite confirmed facts from a lookup.
+Reject invalid identifiers and share totals; represent unknown values explicitly.
+An edit changes our records only, never MCA. Unsupported entities get a clear
+coverage message and specialist-review route. Test conflicting evidence and dates.

@@ -1,0 +1,432 @@
+{
+  "transport": "real local HTTP",
+  "synthetic_only": true,
+  "government_requests": 0,
+  "company_fields": 60,
+  "plan_tables": 8,
+  "plan_rows": 81,
+  "final_status": "recorded",
+  "verification": "manual_professional_attestation",
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/api/companies",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/grants",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/evidence",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/facts/confirm",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/catalog",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/sources/snapshots",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/sources/snapshots/c1dee0d2-845d-4287-831a-1b17191e4476/verify",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/rules",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/rule-releases/5a445a21-67a3-485e-b381-f1335e60e1a3/approve",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/templates",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/templates/59b0383a-d9b0-4699-8ef8-c7062df1475f/approve",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/evaluate",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/obligations/d0685aa2-9b8b-4178-ac01-dc7ca6ce90a7/document-packs",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/document-packs/9e3c09f9-4178-4b4b-abfe-e45a6be4c7cd/reviews",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/filing-attempts",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/evidence",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/filing-attempts/71d9310c-a0a0-45d0-86be-f5ef316ee0a9/evidence",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/evidence",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/evidence",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/filing-attempts/71d9310c-a0a0-45d0-86be-f5ef316ee0a9/evidence",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/filing-attempts/71d9310c-a0a0-45d0-86be-f5ef316ee0a9/submit",
+      "status": 501
+    },
+    {
+      "method": "GET",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/export",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/companies/db8556c9-656a-47bb-9e21-9ae7299e3604/audit",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/document-packs/9e3c09f9-4178-4b4b-abfe-e45a6be4c7cd/download",
+      "status": 200
+    }
+  ]
+}

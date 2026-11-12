@@ -1,0 +1,9 @@
+Implement a deterministic rules engine returning applicable, not_applicable,
+needs_information or specialist_review. Return a trace of fact versions, rule
+versions, condition results and evidence gaps. Use India-local dates and explicit
+units. Model statutory deadlines, extensions and fee relief independently.
+Add synthetic fixtures for first/missing/adjourned AGM, unknown meeting dates,
+entity exclusions, threshold boundaries, effective-date transitions, historical
+filings and conflicting circulars. Never assume a single fixed annual deadline.
+Use professional-approved expected results for real legal fixtures; label other
+examples synthetic. An incomplete rule cannot produce a definitive due date.

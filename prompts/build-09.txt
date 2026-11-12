@@ -1,0 +1,9 @@
+Implement CompanyDataProvider with manual, mock and approved commercial adapters.
+Use the provider's current official specification; the plan's endpoint outline is
+not a production contract. Separate test/production secrets and capability flags.
+Normalize provenance, as-of date, cache information, transaction ID and errors.
+Handle timeout, quota, not-found, malformed payload and stale data distinctly.
+For Sandbox, verify documented response-shape and CIN/LLPIN inconsistencies with
+fixtures/provider confirmation. Do not integrate its discontinued director API.
+Keep manual onboarding functional during outages. No filing capability should
+appear simply because company lookup works. Test without spending production funds.

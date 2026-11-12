@@ -1,0 +1,4630 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "India Company Compliance Backend",
+    "version": "0.1.0",
+    "description": "Preparation and evidence API. No government submission. No frontend."
+  },
+  "paths": {
+    "/api/me": {
+      "get": {
+        "operationId": "me",
+        "summary": "me",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/catalog": {
+      "get": {
+        "operationId": "catalog_get",
+        "summary": "catalog_get",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/integrations": {
+      "get": {
+        "operationId": "integrations",
+        "summary": "integrations",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies": {
+      "post": {
+        "operationId": "company_create",
+        "summary": "company_create",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompanyCreate"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "company_list",
+        "summary": "company_list",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}/grants": {
+      "post": {
+        "operationId": "company_grant",
+        "summary": "company_grant",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Grant"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/companies/{company_id}/grants/{principal_id}": {
+      "delete": {
+        "operationId": "company_revoke",
+        "summary": "company_revoke",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "principal_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}": {
+      "get": {
+        "operationId": "company_profile",
+        "summary": "company_profile",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}/structure": {
+      "get": {
+        "operationId": "company_structure",
+        "summary": "company_structure",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}/facts": {
+      "post": {
+        "operationId": "fact_create",
+        "summary": "fact_create",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FactInput"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "fact_list",
+        "summary": "fact_list",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}/facts/confirm": {
+      "post": {
+        "operationId": "fact_confirm",
+        "summary": "fact_confirm",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FactConfirm"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/companies/{company_id}/evidence": {
+      "post": {
+        "operationId": "evidence_upload",
+        "summary": "evidence_upload",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvidenceInput"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "evidence_list",
+        "summary": "evidence_list",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/evidence/{evidence_id}/download": {
+      "get": {
+        "operationId": "evidence_download",
+        "summary": "evidence_download",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "evidence_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/evidence/{evidence_id}/retention": {
+      "put": {
+        "operationId": "evidence_retention",
+        "summary": "evidence_retention",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "evidence_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Retention"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/evidence/{evidence_id}": {
+      "delete": {
+        "operationId": "evidence_delete",
+        "summary": "evidence_delete",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "evidence_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}/consents": {
+      "post": {
+        "operationId": "consent_record",
+        "summary": "consent_record",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Consent"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/companies/{company_id}/questionnaire/{workflow}": {
+      "get": {
+        "operationId": "questionnaire",
+        "summary": "questionnaire",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "workflow",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}/questionnaire/{workflow}/answers": {
+      "post": {
+        "operationId": "questionnaire_answers",
+        "summary": "questionnaire_answers",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "workflow",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuestionnaireAnswer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/companies/{company_id}/evaluate": {
+      "post": {
+        "operationId": "company_evaluate",
+        "summary": "company_evaluate",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluationRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/companies/{company_id}/obligations": {
+      "get": {
+        "operationId": "obligation_list",
+        "summary": "obligation_list",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}/lookup": {
+      "post": {
+        "operationId": "company_lookup",
+        "summary": "company_lookup",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Lookup"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/companies/{company_id}/audit": {
+      "get": {
+        "operationId": "audit_list",
+        "summary": "audit_list",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/companies/{company_id}/export": {
+      "get": {
+        "operationId": "company_export",
+        "summary": "company_export",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/sources": {
+      "get": {
+        "operationId": "source_register",
+        "summary": "source_register",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/sources/snapshots": {
+      "post": {
+        "operationId": "source_snapshot",
+        "summary": "source_snapshot",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SourceSnapshot"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sources/snapshots/{snapshot_id}/verify": {
+      "post": {
+        "operationId": "source_verify",
+        "summary": "source_verify",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "snapshot_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SourceVerification"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sources/changes": {
+      "get": {
+        "operationId": "source_changes",
+        "summary": "source_changes",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/sources/{source_id}/check": {
+      "post": {
+        "operationId": "source_check",
+        "summary": "source_check",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "source_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/rules": {
+      "post": {
+        "operationId": "rule_create",
+        "summary": "rule_create",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RuleInput"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "rule_list",
+        "summary": "rule_list",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/rule-releases/{rule_id}/approve": {
+      "post": {
+        "operationId": "rule_approve",
+        "summary": "rule_approve",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "rule_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RuleApproval"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rule-releases/{rule_id}/retire": {
+      "post": {
+        "operationId": "rule_retire",
+        "summary": "rule_retire",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "rule_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SourceVerification"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/templates": {
+      "post": {
+        "operationId": "template_create",
+        "summary": "template_create",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemplateInput"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "template_list",
+        "summary": "template_list",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/templates/{template_id}/approve": {
+      "post": {
+        "operationId": "template_approve",
+        "summary": "template_approve",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "template_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemplateApproval"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/obligations/{obligation_id}": {
+      "get": {
+        "operationId": "obligation_get",
+        "summary": "obligation_get",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "obligation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/obligations/{obligation_id}/document-packs": {
+      "post": {
+        "operationId": "pack_create",
+        "summary": "pack_create",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "obligation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PackRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/document-packs/{pack_id}": {
+      "get": {
+        "operationId": "pack_get",
+        "summary": "pack_get",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "pack_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/document-packs/{pack_id}/download": {
+      "get": {
+        "operationId": "pack_download",
+        "summary": "pack_download",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "pack_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/document-packs/{pack_id}/reviews": {
+      "post": {
+        "operationId": "pack_review",
+        "summary": "pack_review",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "pack_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Review"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/filing-attempts": {
+      "post": {
+        "operationId": "filing_create",
+        "summary": "filing_create",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingCreate"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/filing-attempts/{filing_id}": {
+      "get": {
+        "operationId": "filing_get",
+        "summary": "filing_get",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "filing_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/filing-attempts/{filing_id}/evidence": {
+      "post": {
+        "operationId": "filing_evidence",
+        "summary": "filing_evidence",
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "filing_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingObservation"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/filing-attempts/{filing_id}/submit": {
+      "post": {
+        "operationId": "filing_submit",
+        "summary": "filing_submit",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "filing_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/filing-attempts/{filing_id}/handoff": {
+      "get": {
+        "operationId": "filing_handoff",
+        "summary": "filing_handoff",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "filing_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/obligations/{obligation_id}/explain": {
+      "post": {
+        "operationId": "explain",
+        "summary": "explain",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not permitted"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "State conflict"
+          },
+          "422": {
+            "description": "Validation failed"
+          },
+          "503": {
+            "description": "Integration unavailable"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "obligation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ask"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CompanyCreate": {
+        "additionalProperties": false,
+        "properties": {
+          "cin": {
+            "pattern": "^[LU]\\d{5}[A-Z]{2}\\d{4}[A-Z]{3}\\d{6}$",
+            "title": "Cin",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "cin",
+          "name"
+        ],
+        "title": "CompanyCreate",
+        "type": "object"
+      },
+      "Grant": {
+        "additionalProperties": false,
+        "properties": {
+          "principal_id": {
+            "title": "Principal Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "principal_id"
+        ],
+        "title": "Grant",
+        "type": "object"
+      },
+      "FactInput": {
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "title": "Field",
+            "type": "string"
+          },
+          "value": {
+            "title": "Value"
+          },
+          "evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Evidence Id"
+          },
+          "provenance": {
+            "default": "user_declaration",
+            "enum": [
+              "user_declaration",
+              "document",
+              "provider"
+            ],
+            "title": "Provenance",
+            "type": "string"
+          },
+          "valid_from": {
+            "format": "date",
+            "title": "Valid From",
+            "type": "string"
+          },
+          "valid_to": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Valid To"
+          }
+        },
+        "required": [
+          "field",
+          "value",
+          "valid_from"
+        ],
+        "title": "FactInput",
+        "type": "object"
+      },
+      "FactConfirm": {
+        "additionalProperties": false,
+        "properties": {
+          "fact_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "Fact Ids",
+            "type": "array"
+          },
+          "replace_conflicts": {
+            "default": false,
+            "title": "Replace Conflicts",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "fact_ids"
+        ],
+        "title": "FactConfirm",
+        "type": "object"
+      },
+      "EvidenceInput": {
+        "additionalProperties": false,
+        "properties": {
+          "filename": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[\\w .-]+$",
+            "title": "Filename",
+            "type": "string"
+          },
+          "media_type": {
+            "enum": [
+              "application/pdf",
+              "application/json",
+              "text/plain",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "content_base64": {
+            "maxLength": 6700000,
+            "title": "Content Base64",
+            "type": "string"
+          },
+          "purpose": {
+            "enum": [
+              "company_record",
+              "signed_document",
+              "filing_receipt",
+              "professional_certificate",
+              "extension",
+              "other"
+            ],
+            "title": "Purpose",
+            "type": "string"
+          },
+          "observed_on": {
+            "format": "date",
+            "title": "Observed On",
+            "type": "string"
+          }
+        },
+        "required": [
+          "filename",
+          "media_type",
+          "content_base64",
+          "purpose",
+          "observed_on"
+        ],
+        "title": "EvidenceInput",
+        "type": "object"
+      },
+      "Retention": {
+        "additionalProperties": false,
+        "properties": {
+          "legal_hold": {
+            "title": "Legal Hold",
+            "type": "boolean"
+          },
+          "retain_until": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Retain Until"
+          },
+          "reason": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "legal_hold",
+          "reason"
+        ],
+        "title": "Retention",
+        "type": "object"
+      },
+      "Consent": {
+        "additionalProperties": false,
+        "properties": {
+          "purpose": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Purpose",
+            "type": "string"
+          },
+          "allowed": {
+            "title": "Allowed",
+            "type": "boolean"
+          },
+          "version": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "purpose",
+          "allowed",
+          "version"
+        ],
+        "title": "Consent",
+        "type": "object"
+      },
+      "QuestionnaireAnswer": {
+        "additionalProperties": false,
+        "properties": {
+          "answers": {
+            "items": {
+              "$ref": "#/components/schemas/FactInput"
+            },
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "Answers",
+            "type": "array"
+          }
+        },
+        "required": [
+          "answers"
+        ],
+        "title": "QuestionnaireAnswer",
+        "type": "object"
+      },
+      "EvaluationRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "as_of": {
+            "format": "date",
+            "title": "As Of",
+            "type": "string"
+          }
+        },
+        "required": [
+          "as_of"
+        ],
+        "title": "EvaluationRequest",
+        "type": "object"
+      },
+      "Lookup": {
+        "additionalProperties": false,
+        "properties": {
+          "provider": {
+            "enum": [
+              "mock",
+              "sandbox",
+              "apisetu",
+              "ogd",
+              "cashfree"
+            ],
+            "title": "Provider",
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider"
+        ],
+        "title": "Lookup",
+        "type": "object"
+      },
+      "SourceSnapshot": {
+        "additionalProperties": false,
+        "properties": {
+          "source_id": {
+            "title": "Source Id",
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "text": {
+            "maxLength": 100000,
+            "minLength": 10,
+            "title": "Text",
+            "type": "string"
+          },
+          "published_on": {
+            "format": "date",
+            "title": "Published On",
+            "type": "string"
+          },
+          "effective_from": {
+            "format": "date",
+            "title": "Effective From",
+            "type": "string"
+          },
+          "locator": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Locator",
+            "type": "string"
+          },
+          "synthetic": {
+            "default": true,
+            "title": "Synthetic",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "source_id",
+          "title",
+          "url",
+          "text",
+          "published_on",
+          "effective_from",
+          "locator"
+        ],
+        "title": "SourceSnapshot",
+        "type": "object"
+      },
+      "SourceVerification": {
+        "additionalProperties": false,
+        "properties": {
+          "notes": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Notes",
+            "type": "string"
+          }
+        },
+        "required": [
+          "notes"
+        ],
+        "title": "SourceVerification",
+        "type": "object"
+      },
+      "Clause": {
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "title": "Field",
+            "type": "string"
+          },
+          "op": {
+            "enum": [
+              "eq",
+              "ne",
+              "lt",
+              "lte",
+              "gt",
+              "gte",
+              "contains"
+            ],
+            "title": "Op",
+            "type": "string"
+          },
+          "value": {
+            "title": "Value"
+          }
+        },
+        "required": [
+          "field",
+          "op",
+          "value"
+        ],
+        "title": "Clause",
+        "type": "object"
+      },
+      "RuleInput": {
+        "additionalProperties": false,
+        "properties": {
+          "rule_key": {
+            "pattern": "^[a-z0-9_]{3,80}$",
+            "title": "Rule Key",
+            "type": "string"
+          },
+          "workflow": {
+            "enum": [
+              "board_agm",
+              "aoc4",
+              "mgt7",
+              "mgt7a",
+              "adt1",
+              "inc20a",
+              "dir12"
+            ],
+            "title": "Workflow",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "effective_from": {
+            "format": "date",
+            "title": "Effective From",
+            "type": "string"
+          },
+          "effective_to": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Effective To"
+          },
+          "source_snapshot_ids": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Source Snapshot Ids",
+            "type": "array"
+          },
+          "required_fields": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Required Fields",
+            "type": "array"
+          },
+          "conditions": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Clause"
+            },
+            "title": "Conditions",
+            "type": "array"
+          },
+          "exclusions": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Clause"
+            },
+            "title": "Exclusions",
+            "type": "array"
+          },
+          "trigger_field": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Trigger Field"
+          },
+          "days_after": {
+            "anyOf": [
+              {
+                "maximum": 730,
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Days After"
+          },
+          "required_evidence_fields": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Required Evidence Fields",
+            "type": "array"
+          },
+          "professional_certification_required": {
+            "default": false,
+            "title": "Professional Certification Required",
+            "type": "boolean"
+          },
+          "synthetic": {
+            "default": true,
+            "title": "Synthetic",
+            "type": "boolean"
+          },
+          "interpretation": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Interpretation",
+            "type": "string"
+          }
+        },
+        "required": [
+          "rule_key",
+          "workflow",
+          "version",
+          "effective_from",
+          "source_snapshot_ids",
+          "required_fields",
+          "interpretation"
+        ],
+        "title": "RuleInput",
+        "type": "object"
+      },
+      "Address": {
+        "additionalProperties": false,
+        "properties": {
+          "line1": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Line1",
+            "type": "string"
+          },
+          "line2": {
+            "default": "",
+            "title": "Line2",
+            "type": "string"
+          },
+          "city": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "City",
+            "type": "string"
+          },
+          "state": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "State",
+            "type": "string"
+          },
+          "pin": {
+            "pattern": "^\\d{6}$",
+            "title": "Pin",
+            "type": "string"
+          },
+          "country": {
+            "const": "IN",
+            "default": "IN",
+            "title": "Country",
+            "type": "string"
+          }
+        },
+        "required": [
+          "line1",
+          "city",
+          "state",
+          "pin"
+        ],
+        "title": "Address",
+        "type": "object"
+      },
+      "Auditor": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "registration_number": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Registration Number",
+            "type": "string"
+          },
+          "appointment_date": {
+            "format": "date",
+            "title": "Appointment Date",
+            "type": "string"
+          },
+          "tenure_end": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Tenure End"
+          },
+          "consent_confirmed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Consent Confirmed"
+          },
+          "eligibility_confirmed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Eligibility Confirmed"
+          }
+        },
+        "required": [
+          "name",
+          "registration_number",
+          "appointment_date"
+        ],
+        "title": "Auditor",
+        "type": "object"
+      },
+      "Director": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "din": {
+            "pattern": "^\\d{8}$",
+            "title": "Din",
+            "type": "string"
+          },
+          "appointment_date": {
+            "format": "date",
+            "title": "Appointment Date",
+            "type": "string"
+          },
+          "cessation_date": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Cessation Date"
+          },
+          "days_in_india": {
+            "anyOf": [
+              {
+                "maximum": 366,
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Days In India"
+          },
+          "residency_period": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Period"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "name",
+          "din",
+          "appointment_date"
+        ],
+        "title": "Director",
+        "type": "object"
+      },
+      "Facts": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "anyOf": [
+              {
+                "maxLength": 500,
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Name"
+          },
+          "incorporation_date": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Incorporation Date"
+          },
+          "company_class": {
+            "anyOf": [
+              {
+                "enum": [
+                  "private",
+                  "public",
+                  "opc",
+                  "llp",
+                  "section8",
+                  "producer"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Company Class"
+          },
+          "company_status": {
+            "anyOf": [
+              {
+                "enum": [
+                  "active",
+                  "dormant",
+                  "struck_off",
+                  "insolvency",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Company Status"
+          },
+          "registered_address": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Address"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "financial_year": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Period"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "domestic": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Domestic"
+          },
+          "listed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Listed"
+          },
+          "limited_by_shares": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Limited By Shares"
+          },
+          "regulated": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Regulated"
+          },
+          "government_company": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Government Company"
+          },
+          "members": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Member"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Members"
+          },
+          "share_classes": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/ShareClass"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Share Classes"
+          },
+          "shareholdings": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Holding"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Shareholdings"
+          },
+          "beneficial_ownership_flag": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Beneficial Ownership Flag"
+          },
+          "holding_company": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Holding Company"
+          },
+          "subsidiary": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Subsidiary"
+          },
+          "group_relationships": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Group Relationships"
+          },
+          "foreign_ownership": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Foreign Ownership"
+          },
+          "directors": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Director"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Directors"
+          },
+          "auditor": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Auditor"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "signatories": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Signatory"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Signatories"
+          },
+          "paid_up_capital_inr": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*(?:\\d{0,20}|(?=[\\d.]{1,23}0*$)\\d{0,20}\\.\\d{0,2}0*$)",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Paid Up Capital Inr"
+          },
+          "turnover_inr": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*(?:\\d{0,20}|(?=[\\d.]{1,23}0*$)\\d{0,20}\\.\\d{0,2}0*$)",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Turnover Inr"
+          },
+          "turnover_period": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Period"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "loans_flag": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Loans Flag"
+          },
+          "deposits_flag": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Deposits Flag"
+          },
+          "related_party_flag": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Related Party Flag"
+          },
+          "xbrl_required": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Xbrl Required"
+          },
+          "ind_as_required": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Ind As Required"
+          },
+          "complex_securities": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Complex Securities"
+          },
+          "meetings": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Meeting"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Meetings"
+          },
+          "agm_date": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Agm Date"
+          },
+          "agm_held": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Agm Held"
+          },
+          "first_agm": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "First Agm"
+          },
+          "adjourned_agm": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Adjourned Agm"
+          },
+          "statements_adopted": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Statements Adopted"
+          },
+          "approvals": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Approvals"
+          },
+          "extension_evidence_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Extension Evidence Ids"
+          },
+          "business_activities": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Business Activities"
+          },
+          "operating_states": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Operating States"
+          },
+          "employee_count": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Employee Count"
+          },
+          "tax_registrations": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Tax Registrations"
+          },
+          "labour_registrations": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Labour Registrations"
+          },
+          "sector_licences": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Sector Licences"
+          },
+          "prior_filings": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/PriorFiling"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Prior Filings"
+          },
+          "outstanding_notices": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Outstanding Notices"
+          },
+          "coi_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Coi Evidence Id"
+          },
+          "moa_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Moa Evidence Id"
+          },
+          "aoa_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Aoa Evidence Id"
+          },
+          "audited_statements_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Audited Statements Evidence Id"
+          },
+          "board_report_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Board Report Evidence Id"
+          },
+          "auditor_report_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Auditor Report Evidence Id"
+          },
+          "auditor_appointment_kind": {
+            "anyOf": [
+              {
+                "enum": [
+                  "first",
+                  "subsequent",
+                  "casual_vacancy"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Auditor Appointment Kind"
+          },
+          "commencement_applicable": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Commencement Applicable"
+          },
+          "subscription_paid": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Subscription Paid"
+          },
+          "director_change_kind": {
+            "anyOf": [
+              {
+                "enum": [
+                  "appointment",
+                  "resignation",
+                  "other_cessation"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Director Change Kind"
+          },
+          "director_change_date": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Director Change Date"
+          },
+          "director_consent_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Director Consent Evidence Id"
+          },
+          "director_cessation_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Director Cessation Evidence Id"
+          }
+        },
+        "title": "Facts",
+        "type": "object"
+      },
+      "Holding": {
+        "additionalProperties": false,
+        "properties": {
+          "member_id": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Member Id",
+            "type": "string"
+          },
+          "class_id": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Class Id",
+            "type": "string"
+          },
+          "shares": {
+            "minimum": 0,
+            "title": "Shares",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "member_id",
+          "class_id",
+          "shares"
+        ],
+        "title": "Holding",
+        "type": "object"
+      },
+      "Meeting": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "board",
+              "agm",
+              "egm"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "scheduled_date": {
+            "format": "date",
+            "title": "Scheduled Date",
+            "type": "string"
+          },
+          "held": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Held"
+          },
+          "notice_date": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Notice Date"
+          },
+          "notice_served": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Notice Served"
+          },
+          "attendance": {
+            "default": [],
+            "items": {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Attendance",
+            "type": "array"
+          },
+          "decisions": {
+            "default": [],
+            "items": {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Decisions",
+            "type": "array"
+          },
+          "votes": {
+            "additionalProperties": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "default": {},
+            "title": "Votes",
+            "type": "object"
+          }
+        },
+        "required": [
+          "kind",
+          "scheduled_date"
+        ],
+        "title": "Meeting",
+        "type": "object"
+      },
+      "Member": {
+        "additionalProperties": false,
+        "properties": {
+          "member_id": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Member Id",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "foreign": {
+            "default": false,
+            "title": "Foreign",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "member_id",
+          "name"
+        ],
+        "title": "Member",
+        "type": "object"
+      },
+      "Period": {
+        "additionalProperties": false,
+        "properties": {
+          "start": {
+            "format": "date",
+            "title": "Start",
+            "type": "string"
+          },
+          "end": {
+            "format": "date",
+            "title": "End",
+            "type": "string"
+          }
+        },
+        "required": [
+          "start",
+          "end"
+        ],
+        "title": "Period",
+        "type": "object"
+      },
+      "PriorFiling": {
+        "additionalProperties": false,
+        "properties": {
+          "form": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Form",
+            "type": "string"
+          },
+          "financial_year": {
+            "$ref": "#/components/schemas/Period"
+          },
+          "srn": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Srn",
+            "type": "string"
+          },
+          "status": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Status",
+            "type": "string"
+          },
+          "evidence_id": {
+            "title": "Evidence Id",
+            "type": "string"
+          },
+          "observed_on": {
+            "format": "date",
+            "title": "Observed On",
+            "type": "string"
+          }
+        },
+        "required": [
+          "form",
+          "financial_year",
+          "srn",
+          "status",
+          "evidence_id",
+          "observed_on"
+        ],
+        "title": "PriorFiling",
+        "type": "object"
+      },
+      "RuleFixture": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "facts": {
+            "$ref": "#/components/schemas/Facts"
+          },
+          "as_of": {
+            "format": "date",
+            "title": "As Of",
+            "type": "string"
+          },
+          "expected_status": {
+            "enum": [
+              "applicable",
+              "not_applicable",
+              "needs_information",
+              "specialist_review"
+            ],
+            "title": "Expected Status",
+            "type": "string"
+          },
+          "expected_due_date": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Expected Due Date"
+          }
+        },
+        "required": [
+          "name",
+          "facts",
+          "as_of",
+          "expected_status"
+        ],
+        "title": "RuleFixture",
+        "type": "object"
+      },
+      "ShareClass": {
+        "additionalProperties": false,
+        "properties": {
+          "class_id": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Class Id",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "issued_shares": {
+            "minimum": 0,
+            "title": "Issued Shares",
+            "type": "integer"
+          },
+          "face_value_inr": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*(?:\\d{0,20}|(?=[\\d.]{1,23}0*$)\\d{0,20}\\.\\d{0,2}0*$)",
+                "type": "string"
+              }
+            ],
+            "title": "Face Value Inr"
+          }
+        },
+        "required": [
+          "class_id",
+          "name",
+          "issued_shares",
+          "face_value_inr"
+        ],
+        "title": "ShareClass",
+        "type": "object"
+      },
+      "Signatory": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "role": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Role",
+            "type": "string"
+          },
+          "identifier": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Identifier",
+            "type": "string"
+          },
+          "dsc_associated": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Dsc Associated"
+          }
+        },
+        "required": [
+          "name",
+          "role",
+          "identifier"
+        ],
+        "title": "Signatory",
+        "type": "object"
+      },
+      "RuleApproval": {
+        "additionalProperties": false,
+        "properties": {
+          "reviewer_notes": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Reviewer Notes",
+            "type": "string"
+          },
+          "fixtures": {
+            "items": {
+              "$ref": "#/components/schemas/RuleFixture"
+            },
+            "minItems": 2,
+            "title": "Fixtures",
+            "type": "array"
+          }
+        },
+        "required": [
+          "reviewer_notes",
+          "fixtures"
+        ],
+        "title": "RuleApproval",
+        "type": "object"
+      },
+      "TemplateInput": {
+        "additionalProperties": false,
+        "properties": {
+          "workflow": {
+            "enum": [
+              "board_agm",
+              "aoc4",
+              "mgt7",
+              "mgt7a",
+              "adt1",
+              "inc20a",
+              "dir12"
+            ],
+            "title": "Workflow",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1,
+            "title": "Version",
+            "type": "integer"
+          },
+          "source_snapshot_ids": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Source Snapshot Ids",
+            "type": "array"
+          },
+          "title": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "instructions": {
+            "items": {
+              "maxLength": 500,
+              "minLength": 1,
+              "type": "string"
+            },
+            "maxItems": 30,
+            "minItems": 1,
+            "title": "Instructions",
+            "type": "array"
+          },
+          "signatory_policy": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Signatory Policy",
+            "type": "string"
+          },
+          "synthetic": {
+            "default": true,
+            "title": "Synthetic",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "workflow",
+          "version",
+          "source_snapshot_ids",
+          "title",
+          "instructions",
+          "signatory_policy"
+        ],
+        "title": "TemplateInput",
+        "type": "object"
+      },
+      "TemplateApproval": {
+        "additionalProperties": false,
+        "properties": {
+          "notes": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Notes",
+            "type": "string"
+          }
+        },
+        "required": [
+          "notes"
+        ],
+        "title": "TemplateApproval",
+        "type": "object"
+      },
+      "PackRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "final": {
+            "default": false,
+            "title": "Final",
+            "type": "boolean"
+          }
+        },
+        "title": "PackRequest",
+        "type": "object"
+      },
+      "Review": {
+        "additionalProperties": false,
+        "properties": {
+          "decision": {
+            "enum": [
+              "approved",
+              "changes_requested"
+            ],
+            "title": "Decision",
+            "type": "string"
+          },
+          "comments": {
+            "maxLength": 5000,
+            "minLength": 1,
+            "title": "Comments",
+            "type": "string"
+          },
+          "certification_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Certification Evidence Id"
+          }
+        },
+        "required": [
+          "decision",
+          "comments"
+        ],
+        "title": "Review",
+        "type": "object"
+      },
+      "FilingCreate": {
+        "additionalProperties": false,
+        "properties": {
+          "pack_id": {
+            "title": "Pack Id",
+            "type": "string"
+          },
+          "srn": {
+            "pattern": "^[A-Za-z0-9-]{5,40}$",
+            "title": "Srn",
+            "type": "string"
+          }
+        },
+        "required": [
+          "pack_id",
+          "srn"
+        ],
+        "title": "FilingCreate",
+        "type": "object"
+      },
+      "FilingObservation": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "title": "Evidence Id",
+            "type": "string"
+          },
+          "cin": {
+            "pattern": "^[LU]\\d{5}[A-Z]{2}\\d{4}[A-Z]{3}\\d{6}$",
+            "title": "Cin",
+            "type": "string"
+          },
+          "form": {
+            "title": "Form",
+            "type": "string"
+          },
+          "financial_year": {
+            "$ref": "#/components/schemas/Period"
+          },
+          "srn": {
+            "title": "Srn",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "submitted",
+              "payment_pending",
+              "resubmission",
+              "rejected",
+              "recorded",
+              "approved"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "observed_on": {
+            "format": "date",
+            "title": "Observed On",
+            "type": "string"
+          },
+          "signatory_confirmed": {
+            "default": false,
+            "title": "Signatory Confirmed",
+            "type": "boolean"
+          },
+          "payment_confirmed": {
+            "default": false,
+            "title": "Payment Confirmed",
+            "type": "boolean"
+          },
+          "certification_confirmed": {
+            "default": false,
+            "title": "Certification Confirmed",
+            "type": "boolean"
+          },
+          "signed_document_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Signed Document Evidence Id"
+          },
+          "professional_certificate_evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Professional Certificate Evidence Id"
+          }
+        },
+        "required": [
+          "evidence_id",
+          "cin",
+          "form",
+          "financial_year",
+          "srn",
+          "status",
+          "observed_on"
+        ],
+        "title": "FilingObservation",
+        "type": "object"
+      },
+      "Ask": {
+        "additionalProperties": false,
+        "properties": {
+          "question": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Question",
+            "type": "string"
+          },
+          "use_ai": {
+            "default": false,
+            "title": "Use Ai",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "question"
+        ],
+        "title": "Ask",
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

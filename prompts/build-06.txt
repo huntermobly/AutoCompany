@@ -1,0 +1,9 @@
+Build a deterministic DOCX/PDF template pipeline and ZIP export with a manifest.
+Implement professionally approved meeting-document templates and annual-filing
+worksheets only after current kits are supplied. Keep factual minutes distinct
+from planned agenda documents. Refuse final rendering with unresolved required
+fields, invalid amounts, missing consent facts or unsupported legal clauses.
+Produce a worksheet, attachments index and signer checklist; do not counterfeit
+an official MCA form. Preserve original uploaded signed files byte-for-byte.
+Use synthetic long names, Indian currency, tables and page breaks for render
+checks. Test that every generated pack records exact fact/rule/template versions.

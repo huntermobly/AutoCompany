@@ -1,0 +1,6 @@
+From the supplied workflow schema and missing facts, select the smallest useful
+next group of questions. Return JSON: questions[{field_id, question, input_type,
+options, why_needed, evidence_needed}], blocked_by, completion_status.
+Use only field IDs and allowed options from the schema. Do not ask for already
+confirmed facts or collect identifiers that this workflow does not require.
+Unknown answers must stay unknown and trigger the defined review path.

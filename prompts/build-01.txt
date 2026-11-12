@@ -1,0 +1,8 @@
+Implement the application foundation: login, tenants, company-level access grants,
+owner/operator/director/professional/content-reviewer roles, audit events and a
+private document-store abstraction. Use supported dependencies verified from
+official documentation and pin them. Provide local setup and synthetic seed data.
+Implement server-side authorization on every object read/write and download.
+Write integration tests proving that changing tenant/company identifiers cannot
+read or mutate another company's records. Include a reviewer with explicit grants
+to two companies and no access to a third. Do not create live external accounts.
